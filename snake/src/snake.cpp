@@ -1,7 +1,7 @@
 #include "../include/snake.h"
 
 
-Snake::Snake(): s_len(3),s_lenMax(50), dxdy[2]({1,0})
+Snake::Snake(): s_len(3), dxdy[2]{1,0}
 {
 
 }

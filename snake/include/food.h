@@ -1,7 +1,9 @@
+#pragma once
+
 //#ifndef DEF_FOOD
 //#define DEF_FOOD
 
-#pragma once
+
 
 #include "../include/background.h"
 #include "../include/snake.h"

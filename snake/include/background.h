@@ -1,5 +1,9 @@
+#pragma once
+
 //#ifndef DEF_BG
 //#define DEF_BG
+
+
 
 class Background
 {
@@ -17,8 +21,8 @@ int get_y(); // renvoie bg_ny
  
 
 private:
-static const int bg_nx;
-static const int bg_ny;
+static const int bg_nx = 40;
+static const int bg_ny = 20;
 int bgTab[bg_nx*bg_ny];
 
 

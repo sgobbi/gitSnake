@@ -46,6 +46,7 @@ void Background::clear()
     if( out != 0){
         std::cerr << "clear command failed" << std::endl;
         exit(1);
+    }
 }
 
 void Background::print(int score)

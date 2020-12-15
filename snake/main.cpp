@@ -74,7 +74,7 @@ int main(){
     
    bg.clear();
    bg.setup();
-   sk.setup()
+   sk.setup();
 
 
     startGame(lap, sk,bg);
