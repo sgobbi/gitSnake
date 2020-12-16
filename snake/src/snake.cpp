@@ -1,12 +1,15 @@
 #include "../include/snake.h"
 
 
-Snake::Snake(): s_len(3), dxdy[2]{1,0}
+Snake::Snake() 
 {
-
+s_len = 3;
+dxdy[0] = 1;
+dxdy[1] = 0;
 }
 
-void Snake::add(Background bg)  // ajoute le snake sur le bg 
+
+void Snake::add(Background &bg)  // ajoute le snake sur le bg 
 { 
     for (int i=0; i<s_len; i++)
     {
@@ -46,8 +49,8 @@ void Snake::move(char key)
 
 void Snake::setup()
 {
-     int yi = 3; //Ligne de départ
-        int xi = 3; //Colonne de départ
+     int yi = 5; //Ligne de départ
+        int xi = 5; //Colonne de départ
 
         for (int i=0; i<s_len; i++)  //Départ vertical
         {
@@ -66,27 +69,27 @@ void Snake::update()
     // ajout de la nouvelle tete
     snakePos[0] = snakePos[0] + dxdy[0];
     snakePos[s_lenMax] = snakePos[s_lenMax] + dxdy[1];
+    
 }
 
 bool Snake::in(Background &bg) //verifie si sorti ou si il a mangé sa queue
 {
 bool verif = true;
-nx = bg.get_x();
-ny = bg.get_y();
+int nx = bg.get_x();
+int ny = bg.get_y();
 
 if((snakePos[0]<=0) or (snakePos[0]>= nx - 1) or (snakePos[s_len]<=0) or (snakePos[s_len]>ny) )
 {
     verif = false;
 }
-for (int i=0; i<s_len; i++)
+/*for (int i=0; i<s_len; i++)
 {
-    if((snakePos[0]==snakePos[i]) && (snakePos[s_lenMax]==snakePos[s_lenMax+i])
+    if((snakePos[0]==snakePos[i]) && (snakePos[s_lenMax]==snakePos[s_lenMax+i]))
     {
         verif = false;
     }
 
-}
-
+} */
 return verif;
 }
 
@@ -108,4 +111,9 @@ int Snake::getLenMax()
 void Snake::grow()
 {
     s_len++;
+}
+
+void Snake::modif(int i, int val)
+{
+    snakePos[i] = val;
 }

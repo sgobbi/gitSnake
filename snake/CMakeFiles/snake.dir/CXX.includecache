@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/background.h
+
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/food.h
+../include/background.h
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/background.h
+../include/snake.h
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/snake.h
+
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/snake.h
+background.h
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/background.h
+
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/src/food.cpp
+stdlib.h
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/src/stdlib.h
+../include/food.h
+/Users/salomegobbi/info/cplusplus/gitSnake/snake/include/food.h
+

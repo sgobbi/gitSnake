@@ -1,7 +1,7 @@
 #include "../include/background.h"
 #include <iostream>
 
-Background::Background(): bg_nx(40), bg_ny(20)
+Background::Background() 
 {
         for (int i = 0; i<bg_nx*bg_ny; i++)
     {

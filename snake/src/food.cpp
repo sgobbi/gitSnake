@@ -3,8 +3,10 @@
 
 
 
-Food::Food(): food[0]=0, food[1]=0
+Food::Food()
 {
+    food[0]=0;
+    food[1]=0;
 }
 
 void Food::createFood(Background &bg, Snake &sk){
@@ -29,7 +31,7 @@ void Food::createFood(Background &bg, Snake &sk){
                 int posY = sk.getPos(lenMax + i);
                 if (posX==food[0] && posY==food[1])
                 {
-                    compteur++
+                    compteur++;
                 }
             }
             if (compteur==0)
@@ -38,18 +40,23 @@ void Food::createFood(Background &bg, Snake &sk){
             }
            
         }
-        bg.modif(food[0]+nx*food[1], 2);
+        bg.modif(food[0]+nx*food[1], 3);
         
     }
 }
 
-bool Food::eatFood(Snake sk){
+bool Food::eatFood(Snake &sk){
     int lenMax = sk.getLenMax();
     int posX = sk.getPos(0);
-    int posY = sk.getPos(lenMax)
+    int posY = sk.getPos(lenMax);
+    int lenS = sk.getLen();
     if( (food[0]== posX) && (food[1] == posY) ){
+        
+        sk.modif(lenS, food[0]);
+        sk.modif(lenMax + lenS, food[1]); 
         food[0] = 0;
         food[1] = 0;
+        
         return true;
     }
     return false;

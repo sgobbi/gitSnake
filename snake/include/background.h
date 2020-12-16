@@ -10,7 +10,6 @@ class Background
 public:
 
 Background(); //constructeur
-~Background(); //destructeur 
 void modif(int i, int val); //modifier une valeur dans le bg
 void setup(); //initialisation des bordures
 void clear(); // nettoyage complet de la console

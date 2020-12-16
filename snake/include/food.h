@@ -5,8 +5,8 @@
 
 
 
-#include "../include/background.h"
-#include "../include/snake.h"
+#include "background.h"
+#include "snake.h"
 
 class Food
 {

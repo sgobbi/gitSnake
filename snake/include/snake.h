@@ -4,13 +4,13 @@
 //#define DEF_SNAKE
 
 #include "background.h"
+#include "food.h"
 
 class Snake
 {
 public: 
 
 Snake(); //constructeur
-~Snake(); //destructeur
 void add(Background &bg);
 void remove(Background &bg);
 void move(char key);
@@ -21,6 +21,7 @@ int getPos(int pos);
 int getLen();
 int getLenMax();
 void grow();
+void modif(int i, int val);
 
 private:
 
